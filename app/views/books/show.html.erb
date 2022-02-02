@@ -5,5 +5,20 @@
   <%= @book.title %>
 </p>
 
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+
+<p>
+  <strong>Publish Date:</strong>
+  <%= @book.date.strftime("%m/%d/%Y") %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @book.price %>
+</p>
+
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
