@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2022_02_02_181726) do
+=======
+ActiveRecord::Schema.define(version: 2022_01_21_200137) do
+>>>>>>> main
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,9 +23,12 @@ ActiveRecord::Schema.define(version: 2022_02_02_181726) do
     t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+<<<<<<< HEAD
     t.date "date"
     t.string "author"
     t.decimal "price"
+=======
+>>>>>>> main
   end
 
 end

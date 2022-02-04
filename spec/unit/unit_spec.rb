@@ -3,6 +3,7 @@ require 'rails_helper'
 
 RSpec.describe Book, type: :model do
   subject do
+<<<<<<< HEAD
     described_class.new(title: 'harry potter', date:02/22/2022, author:'J.K. Rowling',price:13.49)
   end
 
@@ -23,6 +24,17 @@ RSpec.describe Book, type: :model do
     subject.date = 'harry potter'
     subject.author = 2/22/2022
     subject.price = 'J.K. Rowling'
+=======
+    described_class.new(title: 'harry potter')
+  end
+
+  it 'is valid with valid attributes' do
+    expect(subject).to be_valid
+  end
+
+  it 'is not valid without a name' do
+    subject.title = nil
+>>>>>>> main
     expect(subject).not_to be_valid
   end
 end
