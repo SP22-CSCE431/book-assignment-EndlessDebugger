@@ -14,8 +14,8 @@
   <tbody>
     <% @lists.each do |list| %>
       <tr>
-        <td><%= list.user_id %></td>
-        <td><%= list.book_id %></td>
+        <td><%= User.where(id: list.user_id).last.username %></td>
+        <td><%= Book.where(id: list.book_id).last.title%></td>
         <td><%= link_to 'Show', list %></td>
         <td><%= link_to 'Edit', edit_list_path(list) %></td>
         <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -25,6 +25,8 @@
 </table>
 
 <br>
-
+<%= link_to 'New List', new_list_path %>
+<br>
 <%= link_to 'Books', books_path %>
+<br>
 <%= link_to 'Users', users_path %>
