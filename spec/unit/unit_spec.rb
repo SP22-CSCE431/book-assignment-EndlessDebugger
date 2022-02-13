@@ -3,7 +3,6 @@ require 'rails_helper'
 
 RSpec.describe Book, type: :model do
   subject do
-<<<<<<< HEAD
     described_class.new(title: 'harry potter', date:02/22/2022, author:'J.K. Rowling',price:13.49)
   end
 
